@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap");
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+ --font-montserrat: "Montserrat", sans-serif;
+ --font-grotesk: "Space Grotesk", monospace;
+ color-scheme: dark;
+}
+
+
+* {
+ scroll-behavior: smooth
+}
+
+
+@layer base {
+ body {
+   @apply font-sans bg-black text-n-1 text-base;
+   font-family: 'Montserrat';
+ }
+}
+
+
+.rotate-45 {
+ @apply rotate-[45deg]
+}
+
+
+.rotate-90 {
+ @apply rotate-[90deg]
+}
+
+
+.rotate-135 {
+ @apply rotate-[135deg]
+}
+
+
+.rotate-180 {
+ @apply rotate-[180deg]
+}
+
+
+.rotate-225 {
+ @apply rotate-[225deg]
+}
+
+
+.rotate-270 {
+ @apply rotate-[270deg]
+}
+
+
+.rotate-315 {
+ @apply rotate-[315deg]
+}
+
+
+.rotate-360 {
+ @apply rotate-[360deg]
+}
+
+
+.-rotate-45 {
+ @apply rotate-[-45deg]
+}
+
+
+.-rotate-90 {
+ @apply rotate-[-90deg]
+}
+
+
+.-rotate-135 {
+ @apply rotate-[-135deg]
+}
+
+
+.-rotate-180 {
+ @apply rotate-[-180deg]
+}
+
+
+.-rotate-225 {
+ @apply rotate-[-225deg]
+}
+
+
+.-rotate-270 {
+ @apply rotate-[-270deg]
+}
+
+
+.-rotate-315 {
+ @apply rotate-[-315deg]
+}
+
+
+.-rotate-360 {
+ @apply rotate-[-360deg]
+}
+
+.gradient-text {
+ @apply bg-gradient-to-r from-white to-[#6c7777] text-transparent bg-clip-text
+}
+
+.gradient-text-dark {
+ @apply bg-gradient-to-r from-white to-[#5c5c5c] text-transparent bg-clip-text
+}
+
+.float {
+ transform-style: preserve-3d;
+ animation: 6s float ease-in-out infinite;
+}
+
+
+.tilt {
+ transition: transform 0.4s ease-out;
+}
+
+
+.difference {
+ mix-blend-mode: difference;
+}
+
+
+.outer-circle {
+ animation: rotateClockwise 110s linear infinite;
+}
+
+
+.inner-circle {
+ animation: rotateCounterClockwise 110s linear infinite;
+}
+
+@keyframes rotateClockwise {
+ from { transform: rotate(0deg); }
+ to { transform: rotate(360deg); }
+}
+
+
+@keyframes rotateCounterClockwise {
+ from { transform: rotate(0deg); }
+ to { transform: rotate(-360deg); }
+}
+
+@keyframes float {
+ 0% {
+   transform: translate3d(0, 0, 0);
+ }
+ 40% {
+   transform: translate3d(0, -0.4rem, 0);
+ }
+ 100% {
+   transform: translate3d(0, 0, 0);
+ }
+}
